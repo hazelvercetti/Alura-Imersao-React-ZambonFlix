@@ -1,11 +1,12 @@
 import React from 'react';
 import Logo from '../../assets/img/Logo.png';
 import Button from '../Button';
+import Nav from './styles';
 import './menu.css';
 
 function Menu() {
     return (
-        <nav className="Menu">
+        <Nav>
             <a href="/">
                 <img className="Logo" src={Logo} alt="SamuraiFlix" />
             </a>
@@ -13,7 +14,7 @@ function Menu() {
             <Button as="a" className="ButtonLink" href="/">
                 Novo vídeo
             </Button>
-        </nav>
+        </Nav>
     );
 }
 
