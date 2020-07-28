@@ -1,5 +1,9 @@
 import React from 'react';
+import NavContainer from './styles';
+import MenuContainer from './components/Menu/styles_MenuContainer';
+import MenuSpacer from './components/Menu/styles_MenuSpacer';
 import Menu from './components/Menu';
+
 import dadosIniciais from '../../../../data/dados_iniciais.json';
 
 function Nav() {
@@ -7,19 +11,17 @@ function Nav() {
     const categorias = dadosIniciais.categorias.map((categoria, index) => ({ key: index, title: categoria.titulo, src: '' }));
 
     return (
-        <nav>
-            <ul className="list-group list-group-horizontal list-unstyled">
-                <li>
-                    <Menu displayName="Categorias" subMenus={categorias} />
-                </li>
-                <li>
-                    <Menu displayName="Planos" />
-                </li>
-                <li>
-                    <Menu displayName="Canais" />
-                </li>
-            </ul>
-        </nav>
+        <NavContainer className="navbar-nav">
+            <MenuSpacer />
+            <MenuContainer className="list-group list-group-horizontal list-unstyled">
+                <Menu displayName="Categorias" subMenus={categorias} />
+            
+                <Menu displayName="Planos" />
+            
+                <Menu displayName="Canais" />
+            </MenuContainer>
+            <MenuSpacer />
+        </NavContainer>
     );
 }
 

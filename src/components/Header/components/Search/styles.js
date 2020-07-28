@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const InputGroup = styled.div`
-width: auto;
 border: 1px solid var(--primary);
 border-radius: 1.5em;
-padding: 0.6em 0.8em;
 flex-direction: row;
 flex-flow: nowrap;
+flex-grow: 2;
 
 -webkit-transition: background-color 0.4s linear;
 -moz-transition: background-color 0.4s linear;
@@ -41,10 +40,6 @@ transition: background-color 0.4s linear;
 
 &:focus-within input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
     color: var(--white);
-}
-
-@media (max-width: 800px) {
-    border: none;
 }
 `;
 

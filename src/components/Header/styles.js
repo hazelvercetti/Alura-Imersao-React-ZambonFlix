@@ -1,27 +1,12 @@
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-width: 100%;
-height: 94px;
-z-index: 100;
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-padding-left: 5%;
-padding-right: 5%;
-
-background: var(--black);
 border-bottom: 2px solid var(--primary);
+background-color: var(--black) !important;
+min-height: 80px;
 
-@media (max-width: 800px) {
-    height: 40px;
-    justify-content: center;
+@media (max-width: 992px) {
+    min-height: 60px;
 }
 `;
 

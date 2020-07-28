@@ -5,11 +5,7 @@ background-color: transparent;
 border: none;
 outline: none;
 color: var(--white);
-font-size: 0.9em;
-
-@media (max-width: 800px) {
-    display: none;
-}
+flex-grow: 1;
 `;
 
 export default SearchBox;
