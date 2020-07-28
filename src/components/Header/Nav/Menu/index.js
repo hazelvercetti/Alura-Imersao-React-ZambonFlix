@@ -1,6 +1,6 @@
 import React from 'react';
-import ListItemMenu from './styles_ListItemMenu';
-import ParentMenu from './styles_ParentMenu';
+import styled from 'styled-components';
+import Button from '../../../Button';
 import Dropdown from '../Dropdown/index';
 
 function Menu({ displayName, subMenus }) {
@@ -20,13 +20,19 @@ function Menu({ displayName, subMenus }) {
 
     return (
         <ListItemMenu className={liClass}>
-            <ParentMenu className={menuClass} href="#" role="button" data-toggle={subMenus ? 'dropdown' : undefined} aria-haspopup="true" aria-expanded="false">
+            <Button className={menuClass} href="#" role="button" data-toggle={subMenus ? 'dropdown' : undefined} aria-haspopup="true" aria-expanded="false">
                 {displayName}
-            </ParentMenu>
+            </Button>
 
             {dropdown}
         </ListItemMenu>
     );
 }
+
+const ListItemMenu = styled.li`
+    flex-grow: 1;
+    text-align: center;
+`;
+
 
 export default Menu;

@@ -1,8 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
 import InputGroup from './styles';
-import SearchBox from './styles_textbox';
-import SearchButton from './styles_button';
-import ButtonGroup from './styles_ButtonGroup';
 
 function Search() {
     return (
@@ -15,5 +13,25 @@ function Search() {
         </InputGroup>
     );
 }
+
+const SearchButton = styled.a`
+    color: var(--primary);
+
+    &:not([href]) {
+        color: var(--primary);
+    }
+`;
+
+const ButtonGroup = styled.div`
+    align-items: center;
+`;
+
+const SearchBox = styled.input`
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    flex-grow: 1;
+`;
 
 export default Search;
