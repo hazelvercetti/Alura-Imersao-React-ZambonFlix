@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-const Nav = styled.nav`
-opacity: 0.98;
-
+const HeaderContainer = styled.header`
 width: 100%;
 height: 94px;
 z-index: 100;
@@ -27,4 +25,4 @@ border-bottom: 2px solid var(--primary);
 }
 `;
 
-export default Nav;
+export default HeaderContainer;
