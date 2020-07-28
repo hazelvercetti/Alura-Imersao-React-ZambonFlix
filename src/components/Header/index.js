@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderContainer from './styles';
 import LogoContainer from './components/Logo/components/LogoContainer/styles';
 import LogoSmall from './components/Logo/styles_LogoSmall';
 import Logo from './components/Logo/styles_Logo';
@@ -14,7 +15,7 @@ import LogoMini from '../../assets/img/Logo_Mini.png';
 
 function Header() {
     return (
-        <header className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <HeaderContainer className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
                 <LogoContainer className="navbar-brand" href="/">
                     <LogoSmall src={LogoMini} alt="Zambonflix Logo" />
@@ -39,7 +40,7 @@ function Header() {
                     </ActionsContainer>
                 </div>
             </div>
-        </header>
+        </HeaderContainer>
     );
 }
 

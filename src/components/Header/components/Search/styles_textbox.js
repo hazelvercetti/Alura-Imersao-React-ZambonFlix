@@ -6,10 +6,6 @@ border: none;
 outline: none;
 color: var(--white);
 flex-grow: 1;
-
-/* @media (max-width: 1120px) {
-    display: none;
-} */
 `;
 
 export default SearchBox;
