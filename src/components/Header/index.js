@@ -17,7 +17,7 @@ function Header() {
     return (
         <HeaderContainer className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <LogoContainer className="navbar-brand" href="/">
+                <LogoContainer className="navbar-brand" to="/">
                     <LogoSmall src={LogoMini} alt="Zambonflix Logo" />
                     <Logo src={LogoFull} alt="Zambonflix" className="pl-2 hide-small" />
                 </LogoContainer>
