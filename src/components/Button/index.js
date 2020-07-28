@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-color: ${props => props.foreColor || 'var(--white)'};
+color: var(--white);
+white-space: nowrap;
+
+&:focus, &.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+&:hover {
+    color: var(--white);
+}
+
+/* color: ${props => props.foreColor || 'var(--white)'};
 background-color: ${props => props.backgroundColor || 'transparent'};
 cursor: pointer;
 
@@ -44,7 +54,7 @@ transition: border-color 0.4s linear;
         font-size: 10px !important;
     }
 
-}
+} */
 
 /* @media (max-width: 800px) {
     position: fixed;

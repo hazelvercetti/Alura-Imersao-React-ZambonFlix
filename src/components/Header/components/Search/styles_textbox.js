@@ -5,11 +5,11 @@ background-color: transparent;
 border: none;
 outline: none;
 color: var(--white);
-font-size: 0.9em;
+flex-grow: 1;
 
-@media (max-width: 800px) {
+/* @media (max-width: 1120px) {
     display: none;
-}
+} */
 `;
 
 export default SearchBox;
