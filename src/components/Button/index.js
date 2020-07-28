@@ -1,26 +1,61 @@
-import React from 'react';
 import styled from 'styled-components';
-import './button.css';
 
 const Button = styled.button`
-color: var(--white);
-border: 1px solid var(--white);
-box-sizing: border-box;
+color: ${props => props.foreColor || 'var(--white)'};
+background-color: ${props => props.backgroundColor || 'transparent'};
 cursor: pointer;
-padding: 16px 24px;
+
+margin: 0 1em;
+padding: 0.7em;
+
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: bold;
-font-size: 16px;
+font-size: 0.95em;
+text-transform: uppercase;
+white-space: nowrap;
+
 outline: none;
 border-radius: 5px;
 text-decoration: none;
-display: inline-block;
-transition: opacity .3s;
+
+border-width: 0.2rem;
+border-color: rgba(255,255,255,0);
+-webkit-transition: border-color 0.4s linear;
+-moz-transition: border-color 0.4s linear;
+-o-transition: border-color 0.4s linear;
+transition: border-color 0.4s linear;
 
 &:hover,
 &:focus {
-opacity: .5;
+    color: ${props => props.foreColor || 'var(--white)'};
+    border-width: 0.2rem;
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: none;
 }
+
+
+@media (max-width: 800px) {
+    padding: 0.25em;
+    margin: 0 0.6em;
+    font-size: 0.6em;
+
+    &::after {
+        font-size: 10px !important;
+    }
+
+}
+
+/* @media (max-width: 800px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 0;
+    border: 0;
+    text-align: center;
+} */
 `;
 
 export default Button;
