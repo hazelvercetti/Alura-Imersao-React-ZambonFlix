@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-const LogoContainer = styled(Link)`
+const LogoContainer = styled.a`
 padding: 0 0;
 margin: 0;
 line-height: normal;
