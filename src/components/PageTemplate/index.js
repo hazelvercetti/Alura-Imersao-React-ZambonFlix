@@ -4,7 +4,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 const Main = styled.main`
-background-color: var(--dark);
+background-color: #222;
 color: var(--white);
 flex: 1;
 `;
@@ -13,8 +13,10 @@ function PageTemplate({ showMargins, children }) {
     return (
         <>
             <Header />
-            <Main className={(showMargins ?? true) ? "pt-5 px-3" : ""}>
-                { children }
+            <Main className={((showMargins ?? true) ? "pt-5 px-3" : "")}>
+                <div className="container">
+                    {children}
+                </div>
             </Main>
             <Footer />
         </>
