@@ -28,6 +28,17 @@ export const VideoCardContainer = styled.a`
   &:not(:first-child) {
     margin-left: 20px;
   }
+
+  
+  @media (max-width: 992px) {
+    width: 211px;
+    height: 140px;
+  }
+
+  @media (max-width: 370px) {
+    width: 136px;
+    height: 90px;
+  }
 `;
 
 export default VideoCardContainer;
