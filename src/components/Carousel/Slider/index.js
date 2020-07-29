@@ -3,27 +3,51 @@ import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
 const Container = styled.ul`
-  padding: 0;
-  margin: 0;
-  .slick-prev,
-  .slick-next {
-    z-index: 50;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    transform: initial;
-    &:before {
-      font-size: 30px;
-    }
+  & .slick-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  
-  .slick-prev {
+
+  & .slick-list {
+    flex-grow: 1;
+  }
+
+  & .slick-prev,
+  & .slick-next {
+    position: relative;
     left: 0;
+    width: auto;
+    height: auto;
+    top: auto;
+    transform: none;
+    font-size: 0px;
   }
-  .slick-next {
-    right: 16px;
+
+  & .slick-prev:before,
+  & .slick-next:before {
+    margin: 0.5em;
+    font-family: FontAwesome;
+    color: var(--primary);
+    opacity: .9;
+    font-size: xx-large;
+  }
+
+  & .slick-prev:before {
+    content: '\f053';
+
+  }
+
+  & .slick-next:before {
+    content: '\f054';
+  }
+
+  & .slick-prev {
+    margin-right: 1em;
+  }
+
+  & .slick-next {
+    margin-left: 1em;
   }
 `;
 
@@ -39,10 +63,10 @@ export const SliderItem = styled.li`
 
 
 const Slider = ({ children }) => (
-  <Container>
+  <Container className="p-0">
     <SlickSlider {...{
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 300,
       centerMode: false,
       variableWidth: true,

@@ -9,21 +9,21 @@ function Carousel({
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
-  const categoryExtraLink = category.link_extra;
+  //const categoryExtraLink = category.link_extra;
   const videos = category.videos;
 
   return (
-    <VideoCardGroupContainer>
+    <VideoCardGroupContainer className="mx-3 mb-3">
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
+          <Title color={ categoryColor || 'red' }>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && 
+          {/* {categoryExtraLink && 
             <ExtraLink href={categoryExtraLink.url} target="_blank">
               {categoryExtraLink.text}  
             </ExtraLink>
-          }
+          } */}
         </>
       )}
       <Slider>
@@ -35,6 +35,7 @@ function Carousel({
           return (
             <SliderItem key={video.titulo}>
               <VideoCard
+                key={video.titulo}
                 videoTitle={video.titulo}
                 videoURL={video.url}
                 categoryColor={categoryColor}

@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './index.css';
 import App from './pages/Home';
+import NotFound from './pages/404';
 import Login from './pages/Auth/Login';
 
 ReactDOM.render(
@@ -21,7 +22,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={App} exact />
       <Route path="/auth/login" component={Login} />
-      <Route component={() => (<div>Página 404</div>)} />
+      <Route component={NotFound} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
